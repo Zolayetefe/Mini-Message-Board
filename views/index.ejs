@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <% messages.forEach((message)=>{ %>
+        <strong><%= message.user %>: <%= message.text %> </strong>
+         <br>
+         <small> <%= message.added %></small>
+         <a href="http://localhost:8184/message/<%=message.user%>">view Detail</a>
+         <br><br>
+  <%  }) %>
+
+  <br><br><br>
+  <button><a href="http://localhost:8184/message/new"><strong>add</strong></a></button>
+</body>
+</html>
